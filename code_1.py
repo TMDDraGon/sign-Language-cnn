@@ -48,7 +48,4 @@ class AlexNet(Sequential):
                     loss='categorical_crossentropy',
                     metrics=['accuracy'])
         
-num_classes = 29
-model = AlexNet((227, 227, 3), num_classes)
 
-model.summary()
