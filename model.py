@@ -1,10 +1,7 @@
 import tensorflow as tf
-from tensorflow.keras import Model
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.utils import to_categorical
-from tensorflow.keras.losses import categorical_crossentropy
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D, Dropout
+from tensorflow.keras.optimizers import Adam
 
 class AlexNet(Sequential):
     def __init__(self, input_shape, num_classes):
@@ -47,5 +44,3 @@ class AlexNet(Sequential):
         self.compile(optimizer= tf.keras.optimizers.Adam(0.001),
                     loss='categorical_crossentropy',
                     metrics=['accuracy'])
-        
-
