@@ -1,6 +1,6 @@
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D, Dropout
+from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D
 from tensorflow.keras.optimizers import Adam
 
 class AlexNet(Sequential):
@@ -41,6 +41,6 @@ class AlexNet(Sequential):
         self.add(Dense(1000, activation= 'relu'))
         self.add(Dense(num_classes, activation= 'softmax'))
 
-        self.compile(optimizer= tf.keras.optimizers.Adam(0.001),
+        self.compile(optimizer= Adam(0.001),
                     loss='categorical_crossentropy',
                     metrics=['accuracy'])
