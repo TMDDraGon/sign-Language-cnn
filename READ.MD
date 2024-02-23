@@ -1,3 +1,23 @@
+# install conda
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+source ~/.bashrc
+
+conda create -n tf_env python=3.8 -y
+conda activate tf_env -y
+conda install tensorflow-gpu
+
+# tensorflow ดูว่าของตัวเองใช้อันไหนได้
+https://www.tensorflow.org/install/source#tested_build_configurations
+pip install tensorflow==2.3.*
+
+git https://github.com/TMDDraGon/sign-Language-cnn.git
+code Documents/sign-Language-cnn/
+
+
+conda deactivate
+conda remove --name tf_env --all -y
+
 `ref`\
     `Eng`\
     - https://www.mdpi.com/1424-8220/23/18/7970 \
