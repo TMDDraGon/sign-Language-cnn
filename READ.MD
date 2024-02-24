@@ -2,7 +2,7 @@
 git clone https://github.com/TMDDraGon/sign-Language-cnn.git
 
 # setup_environment(Miniconda)
-bash Documents/sign-Language-cnn/setup_environment.sh
+source sign-Language-cnn/setup_environment.sh
 
 # Open the cloned repository in VSCode
 code Documents/sign-Language-cnn/
