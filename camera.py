@@ -58,9 +58,6 @@ length_label.pack(side=tk.LEFT, padx=(0, 10))
 
 # Function to preprocess image and make predictions
 def predict_sign_language(image):
-    # plt.imshow(image)
-    # plt.axis('off')
-    # plt.show()
     image = image.astype('float32') / 255.0
     image = np.expand_dims(image, axis=0)
     prediction = model.predict(image)

@@ -20,5 +20,5 @@ pip install tensorflow==2.3.*
 pip install pandas==1.2.4
 pip install scipy==1.7.3
 
-# pip install pexpect==4.9
-# pip install typing-extensions==4.9
+pip install pexpect==4.9
+pip install typing-extensions==4.9
