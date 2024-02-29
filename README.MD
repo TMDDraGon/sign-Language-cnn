@@ -1,17 +1,19 @@
-# Clone a GitHub repository
+# camera
+pip install opencv-python matplotlib numpy mediapipe keras Pillow \
+pip install tensorflow
+
+# train model 
+- Clone a GitHub repository \
 git clone https://github.com/TMDDraGon/sign-Language-cnn.git
-
-# setup_environment(Miniconda)
+- setup_environment(Miniconda) \
 source sign-Language-cnn/setup_environment.sh
-
-# Open the cloned repository in VSCode
+- Open the cloned repository in VSCode \
 code Documents/sign-Language-cnn/
-
-# Deactivate the conda environment
+- Deactivate the conda environment \
 conda deactivate
-
-# Remove the conda environment named tf_env
+- Remove the conda environment named tf_env \
 conda remove -y -n tf_env --all
+
 
 `ref`\
     `Eng`\

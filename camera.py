@@ -1,4 +1,5 @@
 import cv2
+from matplotlib import pyplot as plt
 import numpy as np
 import mediapipe as mp
 from keras.models import load_model
@@ -57,6 +58,9 @@ length_label.pack(side=tk.LEFT, padx=(0, 10))
 
 # Function to preprocess image and make predictions
 def predict_sign_language(image):
+    # plt.imshow(image)
+    # plt.axis('off')
+    # plt.show()
     image = image.astype('float32') / 255.0
     image = np.expand_dims(image, axis=0)
     prediction = model.predict(image)
@@ -157,7 +161,7 @@ while True:
                 maxX, maxY = max(maxX, x), max(maxY, y)
 
             # Determine the size for a square bounding box
-            squareSide = 270  # Fixed size before resizing
+            squareSide = 300  # Fixed size before resizing
             
             # Center the square box around the hand's center
             centerX = (minX + maxX) // 2
@@ -177,8 +181,7 @@ while True:
                 squareMaxY = h
                 squareMinY = h - squareSide
 
-            hand_image = frame[squareMinY:squareMaxY, squareMinX:squareMaxX]
-
+            hand_image = frame_rgb[squareMinY:squareMaxY, squareMinX:squareMaxX]
             hand_image_resized = cv2.resize(hand_image, (227, 227))  # Assuming `hand_image` is defined
             prediction = predict_sign_language(hand_image_resized)
             update_sentence(prediction)  # Update the GUI with the new prediction
