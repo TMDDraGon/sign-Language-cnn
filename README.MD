@@ -2,7 +2,7 @@
 ![Alt text](image/ASL_Alphabet.jpg)
 
 # set up code
-# train model 
+# train model (recommend nvidia gpu)
 - Clone a GitHub repository \
 git clone https://github.com/TMDDraGon/sign-Language-cnn.git
 - setup_environment(Miniconda) \
@@ -14,11 +14,13 @@ conda deactivate
 - Remove the conda environment named tf_env \
 conda remove -y -n tf_env --all
 # camera(in windoe only)
+python will be install from pyhon web
+
 pip install opencv-python matplotlib numpy mediapipe keras Pillow \
 pip install tensorflow
 
 # edit 
-if you want to change dataset, you can change asl_alphabet_train \
+if you want to change dataset, you can change asl_alphabet_train ( you can should from https://www.kaggle.com/search?q=sign+Language+in%3Adatasets )\
 chang to dataset name \
 ![Alt text](image/รูปภาพ1.png)
 
@@ -31,6 +33,7 @@ channel is color image (3 is rgb)\
 adjust\
 chang model structure \
 ![Alt text](image/รูปภาพ3.png)
+![Alt text](image/model.png)
 
 `ref`\
     - https://www.mdpi.com/1424-8220/23/18/7970 \
